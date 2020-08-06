@@ -123,7 +123,7 @@
 	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
 }
  .md-select ul[role=listbox] li {
-	 height: 48px;
+  height: 65px;
 	 margin: 0;
 	 padding: 10px 16px;
 	 outline: none;
@@ -199,10 +199,11 @@
 	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
 }
  .md-select1 ul[role=listbox] li {
-	 height: 48px;
+	 height: 65px;
 	 margin: 0;
 	 padding: 10px 16px;
 	 outline: none;
+   text-align: center;
 	 overflow: hidden;
 }
  .md-select1 ul[role=listbox] li:focus, .md-select1 ul[role=listbox] li:hover, .md-select1 ul[role=listbox] li.active {
@@ -218,21 +219,54 @@
 .center{
     text-align: center;
 }
-.image{
+.md-select .image{
     width: 35%;
     margin-top: 8px;
     margin-left: 5px;
     /* background: blue; */
     float: left;
 }
-.heading{
+
+.md-select .heading{
     width: 60%;
     /* background: green; */
     float: left;
 }
+.md-select1 .image{
+    width: 30%;
+    margin-top: -58px;
+    margin-right: 5px;
+    /* background: blue; */
+    text-align: right;
+    float: right;
+}
+
+.md-select1 .heading{
+    width: 60%;
+    /* background: green; */
+    margin-left: 10px;
+    text-align: right;
+    /* float: right; */
+}
+.md-select1 .imageD{
+    width: 30%;
+    margin-top: -52px;
+    margin-right: 5px;
+    /* background: blue; */
+    text-align: right;
+    float: right;
+}
+
+.md-select1 .headingD{
+    width: 60%;
+    /* background: green; */
+    margin-left: 10px;
+    text-align: right;
+    /* float: right; */
+}
 .imageD{
     width: 35%;
-   
+    
     margin-left: 5px;
     /* background: blue; */
     float: left;
@@ -242,6 +276,17 @@
     width: 60%;
     /* background: green; */
     float: left;
+    text-align: center;
+    /* padding: 0 10px; */
+}
+.headingD h4{
+  /* background-color: aqua; */
+  height: 15px;
+  margin-top: 5px;
+}
+.headingD h6{
+  padding: 0;
+  /* background-color: rgb(36, 63, 63); */
 }
 .selectionBox{
   margin-left:10%;
@@ -252,10 +297,14 @@
 }
 .md-select label, .md-select1 label{
     margin-top:45px;
-    min-width: 250px;
+    min-width: 220px;
     border:1px solid gray;
     padding:5px;
 } 
+.inputs{
+  margin-top:10%;
+}
+
 @media only screen and (max-width: 750px) {
   .selectionBox{
   margin-left:0%;
@@ -294,7 +343,7 @@
                                         <ul role="listbox" id="ul-id" class="md-whiteframe-z1" aria-activedescendant="state2_AK" name="ul-id">
                                           <li role="option" id="state2_AK" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">
                                                 <div class="imageD">
-                                                        <img src="united-states-of-america.png" height="30" width="30" id="OptionImage">
+                                                        <img src="united-states-of-america.png" height="45" width="45" id="OptionImage">
                                                     </div>
                                                     <div class="headingD">
                                                         <h4 style="text-align: center;" id="OptionCurrencyCode">US$</h4>
@@ -303,7 +352,7 @@
                                           </li>
                                           <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
                                             <div class="imageD">
-                                              <img src="india.png" height="30" width="30" id="OptionImage">
+                                              <img src="india.png" height="45" width="45" id="OptionImage">
                                             </div>
                                             <div class="headingD">
                                                 <h4 style="text-align: center;" id="OptionCurrencyCode">INR</h4>
@@ -312,7 +361,7 @@
                                           </li>
                                           <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
                                             <div class="imageD">
-                                              <img src="algeria.png" height="30" width="30">
+                                              <img src="algeria.png" height="45" width="45">
                                             </div>
                                             <div class="headingD">
                                                 <h4 style="text-align: center;">DZD</h4>
@@ -322,7 +371,7 @@
                                           
                                           <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
                                             <div class="imageD">
-                                              <img src="afghanistan.png" height="30" width="30">
+                                              <img src="afghanistan.png" height="45" width="45">
                                             </div>
                                             <div class="headingD">
                                                 <h4 style="text-align: center;">AFN</h4>
@@ -331,7 +380,7 @@
                                           </li>
                                           <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
                                             <div class="imageD">
-                                              <img src="bangladesh.png" height="30" width="30">
+                                              <img src="bangladesh.png" height="45" width="45">
                                             </div>
                                             <div class="headingD">
                                                 <h4 style="text-align: center;">BDT</h4>
@@ -350,84 +399,83 @@
                        
                        <div class="col-sm-6">
                             <div class="md-select1 selectionBox2">
-
                                     <label for="ul-id">
-                                        <div class="image">
-                                            <img src="pakistan.png" height="50" width="50" id="MainImage">
-                                        </div>
+                                       
                                         <div class="heading">
                                             <h4 id="MainCurrencyCode">PKR</h4>
                                             <h6 id="MainCurrencyName">Pakistani Rupees</h6>
                                         </div>
+                                        <div class="image">
+                                            <img src="pakistan.png" height="50" width="50" id="MainImage">
+                                        </div>
                                     </label>
                                     <ul role="listbox" id="ul-id" class="md-whiteframe-z1" aria-activedescendant="state2_AK" name="ul-id">
                                         <li role="option" id="state2_AK" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">
-                                              <div class="imageD">
-                                                      <img src="united-states-of-america.png" height="30" width="30" id="OptionImage">
-                                                  </div>
+                                             
                                                   <div class="headingD">
                                                       <h4 style="text-align: center;" id="OptionCurrencyCode">US$</h4>
                                                       <h6 style="text-align: center;" id="OptionCurrencyName">American Dollar</h6>
                                                   </div>
+                                                  <div class="imageD">
+                                                      <img src="united-states-of-america.png" height="45" width="45" id="OptionImage">
+                                                  </div>
                                         </li>
                                         <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
-                                          <div class="imageD">
-                                            <img src="india.png" height="30" width="30" id="OptionImage">
-                                          </div>
+                                          
                                           <div class="headingD">
                                               <h4 style="text-align: center;" id="OptionCurrencyCode">INR</h4>
                                               <h6 style="text-align: center;" id="OptionCurrencyName">Indian Rupees</h6>
                                           </div>
+                                          <div class="imageD">
+                                              <img src="india.png" height="45" width="45" id="OptionImage">
+                                            </div>
                                         </li>
                                         <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
-                                          <div class="imageD">
-                                            <img src="algeria.png" height="30" width="30">
-                                          </div>
+                                          
                                           <div class="headingD">
                                               <h4 style="text-align: center;">DZD</h4>
                                               <h6 style="text-align: center;">Algerian Dinar</h6>
                                           </div>
+                                          <div class="imageD">
+                                              <img src="algeria.png" height="45" width="45">
+                                            </div>
                                         </li>
                                         
                                         <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
-                                          <div class="imageD">
-                                            <img src="afghanistan.png" height="30" width="30">
-                                          </div>
+                                         
                                           <div class="headingD">
                                               <h4 style="text-align: center;">AFN</h4>
                                               <h6 style="text-align: center;">Afghan afghani</h6>
                                           </div>
+                                          <div class="imageD">
+                                              <img src="afghanistan.png" height="45" width="45">
+                                            </div>
                                         </li>
                                         <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
-                                          <div class="imageD">
-                                            <img src="bangladesh.png" height="30" width="30">
-                                          </div>
+                                         
                                           <div class="headingD">
                                               <h4 style="text-align: center;">BDT</h4>
                                               <h6 style="text-align: center;">Bangladeshi Taka</h6>
                                           </div>
+                                          <div class="imageD">
+                                              <img src="bangladesh.png" height="45" width="45">
+                                            </div>
                                         </li>
                                         </ul>
                                   
                                   </div>
                        </div>
                     </div>
-                <!-- <div class="row">
-                        <div class="col-md-2">
+                <!-- <div class="row inputs">
+                        <div class="col-md-6">
                                 <div class="form-group input-wraper">
                                         
                                         <input type="text" class="form-control input" id="pwd">    
                         
                                     </div>
                         </div>
-                        <div class="col-md-4">
-                                <div class="form-group input-wraper">
-                                        
-                                        <input type="text" class="form-control input" id="pwd">    
                         
-                                    </div>
-                        </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                                 <div class="form-group input-wraper">
                                         
                                         <input type="text" class="form-control input" id="pwd">    
