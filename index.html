@@ -60,13 +60,16 @@
                 margin-left: auto;
                 margin-right: 10px;
                 box-shadow: none;
+                color:#bfbfbf;
                 
             }
             .input::placeholder{
-              text-align: left;
+              text-align: right;
+              color:#bfbfbf;
             }
             .input2::placeholder{
-              text-align: right;
+              text-align: left;
+              color:#bfbfbf;
             }
             .input2{
                 padding: 18px;
@@ -74,6 +77,7 @@
                 height: 50%;
                 width: 30%;
                 float: left;
+                color:#bfbfbf;
                 border:none;
                 transition: width 0.3s;
                 text-align: left; 
@@ -325,10 +329,10 @@
   /* background-color: rgb(36, 63, 63); */
 }
 .selectionBox{
-  margin-left:10%;
+  margin-left:22%;
 }
 .selectionBox2{
-  margin-right: 30%;
+  margin-left: -10%;
   
 }
 .md-select label, .md-select1 label{
@@ -338,7 +342,13 @@
     padding:5px;
 } 
 .inputs{
-  margin-top:10%;
+  margin-top:5%;
+}
+.arrow{
+  margin-left: 22%;
+}
+.secondAmount{
+  margin-left: 70px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -347,15 +357,24 @@
   z-index:999;
 }
 .selectionBox2{
-  margin-top: 20%;
+  margin-top: 5%;
   margin-right: 0%;
   width: auto;
+  margin-left: 0;
+}
+.secondAmount{
+  margin-left:80px;
+}
+.arrow{
+  margin-top: 15%;
+  margin-left: 0;
 }
 .inputs{
   margin-top: 40%;
   margin-left: auto;
-  background: blue;
+  /* background: blue; */
 }
+
 .input{
                 padding: 18px;
                 font-size: 20px;
@@ -369,7 +388,7 @@
                 margin-right: 10px;
                 box-shadow: none;
                 
-            }
+      }
             .input2{
                 padding: 18px;
                 font-size: 20px;
@@ -384,6 +403,14 @@
                 box-shadow: none;
                 
             }
+            .inputs{
+              margin-top: 20%;
+            }
+            .col-md-3{
+              width:350px;
+              margin-left:140px
+            }
+          
 }
            
             </style>
@@ -397,7 +424,7 @@
         <div class="container">
                 <div class="row">
                        
-                        <div class="col-sm-6" >
+                        <div class="col-sm-5" >
                                 <div class="md-select selectionBox">
 
                                         <label for="ul-id">
@@ -460,13 +487,13 @@
                                       
                                       </div>
                        </div>
-                       <!-- <div class="col-md-2">
+                       <div class="col-md-2">
                              <div class="center">
-                                    <img src="inverse.png" height="60" width="60">
+                                    <img src="inverse.png" height="60" width="60"  class="arrow">
                              </div>
-                       </div> -->
+                       </div>
                        
-                       <div class="col-sm-6">
+                       <div class="col-sm-5">
                             <div class="md-select1 selectionBox2">
                                     <label for="ul-id">
                                        
@@ -537,38 +564,29 @@
                     </div>
                 <div class="row inputs" >
                         <div class="col-md-3 col-md-push-2" >
-                                <div class="form-group" style="  padding-top: 2px;" id="formGroup1">
-                                    <label id="label1" style="color:#bfbfbf; transition: 0.3s; margin-left: 101px; padding:15px; font-size: 20px;">
+                                <div class="form-group" style=" margin-right: 5px;  padding-top: 2px;" id="formGroup1">
+                                    <label id="label1" for="input1" style="color:#bfbfbf; transition: 0.3s; margin-left: 91px; padding:15px; font-size: 20px;">
                                         PKR
                                       </label>
-                                        <input type="text" class="form-control input" id="input1"  value="0">    
+                                        <input type="text" class="form-control input" id="input1"  placeholder="0">    
                         
                                     </div>
                         </div>
-                        <div class="col-md-3 col-md-push-4" style="margin-left:70px" >
+                        <div class="col-md-3 col-md-push-4 secondAmount" >
                             <div class="form-group" style="padding-left:30px;  padding-top: 2px;" id="formGroup2">
                                    
-                                    <input type="text" class="form-control input2" id="input2"  value="0" >    
-                                    <label id="label2" style="color:#bfbfbf;  padding:15px; font-size: 20px;">
+                                    <input type="text" class="form-control input2" id="input2"  placeholder="0" >    
+                                    <label id="label2" for="input2" style="color:#bfbfbf;  padding:15px; font-size: 20px;">
                                         PKR
                                       </label>
                                 </div>
                     </div>
-                        <!-- <div class="col-md-4 col-md-pull-2">
-                            <div class="form-groupr">
-                                    
-                                    <input type="text" class="form-control input" id="pwd">    
-                    
-                                </div>
-                    </div> -->
-                        
-                        <!-- <div class="col-md-3 md-offset-3">
-                                <div class="form-group">
-                                        
-                                        <input type="text" class="form-control input" id="pwd">    
-                        
-                                    </div>
-                        </div> -->
+                </div>
+                     <div class="row">
+                       <div class="col-md-6 col-md-push-3">
+                        <img src="money-uk-lede-1300x731-1.jpg" class="img-fluid" height="50%" width="100%">
+                       </div>
+                     </div>
                 </div>
                          
         </div>
@@ -625,10 +643,10 @@
         let formGroup1 = document.getElementById("formGroup1");
         let element1 = document.getElementById("input1");
         let element2 = document.getElementById("input2");
-        formGroup1.style.background = "#ccffcc";
-        element1.style.background = "#ccffcc";
-        element2.style.background = "#ccffcc";
-        formGroup2.style.background = "#ccffcc";
+        formGroup1.style.background = "#686868";
+        element1.style.background = "#686868";
+        element2.style.background = "#686868";
+        formGroup2.style.background = "#686868";
 
       }
       function mouseOut() {
@@ -652,10 +670,10 @@
         let formGroup2 = document.getElementById("formGroup2");
         let formGroup1 = document.getElementById("formGroup1");
         label1.style.marginLeft = "0";
-        formGroup1.style.background = "#ccffcc";
-        element1.style.background = "#ccffcc";
-        element2.style.background = "#ccffcc";
-        formGroup2.style.background = "#ccffcc";
+        formGroup1.style.background = "#686868";
+        element1.style.background = "#686868";
+        element2.style.background = "#686868";
+        formGroup2.style.background = "#686868";
         element1.style.boxShadow = "none";
         element2.style.boxShadow = "none";
         element1.style.width = "68%";
@@ -669,13 +687,14 @@
         let element = document.getElementById("input1");
         let element2 = document.getElementById("input2");
         let label1 = document.getElementById("label1");
-        label1.style.marginLeft = "101px";
+        label1.style.marginLeft = "91px";
         element.style.background = "none";
         element.style.width = "30%";
         element2.style.width = "30%";
         element2.style.background = "none";
         formGroup1.style.background = "none";
         formGroup2.style.background = "none";
+        isFocus = false;
 
       }
       
